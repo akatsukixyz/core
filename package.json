@@ -1,5 +1,5 @@
 {
-  "name": "core",
+  "name": "akatsuki-core",
   "version": "1.0.0",
   "description": "A simple, lightweight framework for Discord.js",
   "main": "index.js",

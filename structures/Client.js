@@ -11,6 +11,7 @@ module.exports = class Client extends discord.Client {
   constructor(options = {}, clientOptions = {}) { 
     if(!options.token) throw new Error(`No token specified.`);
     super(clientOptions);
+    if(!options.owner) console.log(`No owner set. Owner-only settings will not take effect.`);
     this.commands = new discord.Collection(); 
     this.commandsDir = options.commandsDir || './commands';
     this.eventsDir = options.eventsDir || './events';
@@ -20,6 +21,7 @@ module.exports = class Client extends discord.Client {
     this.commandHandler.load();
     this._token = options.token;
     this.prefix = options.prefix || '!';
+    this.owner = owner;
     this.on('error', console.log);
   }; 
   async start() { await this.login(this._token); };

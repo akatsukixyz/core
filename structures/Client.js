@@ -12,7 +12,7 @@ module.exports = class Client extends discord.Client {
     if(!options.token) throw new Error(`No token specified.`);
     super(clientOptions);
     if(!options.owner) console.log(`No owner set. Owner-only settings will not take effect.`);
-    if(!sNaN(options.token) || options.owner.length < 16 || options.owner.length > 18) {
+    if(options.owner && (!isNaN(options.token) || options.owner.length < 16 || options.owner.length > 18)) {
       console.log(`Invalid owner ID provided.`);
       options.owner = null;
     };

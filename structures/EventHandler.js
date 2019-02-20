@@ -8,6 +8,7 @@ module.exports = class CommandHandler {
    */
   constructor(client) { this.client = client; };
   load() {
+    if(!fs.statSync(path.resolve(this.client.eventsDir)).isDirectory()) return console.log('No events folder. Canceling event handler.');
     try { var files = fs.readdirSync(path.resolve(this.client.eventsDir)).filter(f => f.endsWith('.js')); }
     catch(e) { throw new Error(e); };
     if(files.length === 0) console.log(`Warning: No events loaded.`);

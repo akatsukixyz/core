@@ -1,14 +1,14 @@
 'use strict';
 const discord = require('discord.js'),
-  { EventHandler } = require('./EventHandler'),
-  { CommandHandler } = require('./CommandHandler');
+  EventHandler = require('./EventHandler'),
+  CommandHandler = require('./CommandHandler');
 module.exports = class Client extends discord.Client {
   /**
    * Constructor
    * @param {Object} options 
    * @param {discord.ClientOptions} clientOptions 
    */
-  constructor(options, clientOptions) { 
+  constructor(options = {}, clientOptions = {}) { 
     if(!options.token) throw new Error(`No token specified.`);
     super(clientOptions);
     this.commands = new discord.Collection(); 

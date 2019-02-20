@@ -1,3 +1,4 @@
+'use strict';
 module.exports = {
-    Client: require('structures/Client')
+    Client: require('./structures/Client')
 };

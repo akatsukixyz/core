@@ -1,0 +1,12 @@
+{
+  "name": "core",
+  "version": "0.1",
+  "description": "A simple, lightweight framework for Discord.js",
+  "main": "index.js",
+  "repository": "https://github.com/akatsukixyz/core.git",
+  "author": "Yahiko Ame <yahikoxyz@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "discordjs/discord.js"
+  }
+}

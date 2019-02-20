@@ -9,7 +9,7 @@ module.exports = class CommandHandler {
    */
   constructor(client) { this.client = client; };
   load() {
-    try { var files = fs.readdirSync(path.resolve(this.client.eventsDir)).filter(f => f.endsWith('.js')); }
+    try { var files = fs.readdirSync(path.resolve(this.client.commandsDir)).filter(f => f.endsWith('.js')); }
     catch(e) { throw new Error(e); };
     if(files.length === 0) console.log(`Warning: No commands loaded.`);
       for (const file of files) {

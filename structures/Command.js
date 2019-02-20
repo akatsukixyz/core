@@ -1,4 +1,4 @@
-const { Client } = require('../index');
+const { Permissions } = require('discord.js');
 module.exports = class Command {
   constructor(info = {}){ 
     Object.assign(this, info);
@@ -19,10 +19,10 @@ module.exports = class Command {
 			throw new TypeError(`\`clientPerms\` for Command "${this.name}" must be an array`);
 
 		if (this.senderPerms && this.senderPerms.length)
-			this._validatePermissions('callerPermissions', this.senderPerms);
+			this._validatePermissions('senderPerms', this.senderPerms);
 
 		if (this.clientPerms && this.clientPerms.length)
-			this._validatePermissions('clientPermissions', this.clientPerms);
+			this._validatePermissions('clientPerms', this.clientPerms);
 
   };
   async execute(message, args) {};

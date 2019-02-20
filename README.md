@@ -33,11 +33,11 @@ const { Command } = require('akatsuki-core');
 module.exports = class Test extends Command {
 	constructor(client) {
 		super({
-			name: 'Help',
-			description: 'Help command',
-			usage: `\`${client.prefix}help\``,
-			aliases: ['`helpme`'],
-			category: 'misc',
+			name: 'Test',
+			description: 'Test command',
+			usage: `\`${client.prefix}test\``,
+			aliases: ['`tester`'],
+			category: 'test',
 			senderPerms: ['SEND_MESSAGES'],
 			clientPerms: ['SEND_MESSAGES'],
 			ownerOnly: false

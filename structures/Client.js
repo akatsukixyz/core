@@ -21,7 +21,7 @@ module.exports = class Client extends discord.Client {
     this.commandHandler.load();
     this._token = options.token;
     this.prefix = options.prefix || '!';
-    this.owner = owner;
+    this.owner = options.owner || null;
     this.on('error', console.log);
   }; 
   async start() { await this.login(this._token); };

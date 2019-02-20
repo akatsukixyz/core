@@ -1,6 +1,6 @@
 {
   "name": "akatsuki-core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple, lightweight framework for Discord.js",
   "main": "index.js",
   "repository": "https://github.com/akatsukixyz/core.git",
